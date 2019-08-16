@@ -28,7 +28,7 @@ MK2_HEADER_VAL = 0x81
 MK1_HEADER_VAL = 0x82
 LIGHT_GUIDE_CMD = 0xa0
 
-class SFKKApplication(tk.Frame):
+class STKKApplication(tk.Frame):
 
     colorButtons = []              # List of the tkinter Buttons that select colors
     lights_buffer = []             # List of integers containing color values + 1 int header
@@ -469,17 +469,17 @@ class SFKKApplication(tk.Frame):
             # STKKConfig.ini not found, set defaults
             prefs['selectedkeyboard'] = 3
             prefs['defaultcolor'] = '#ff0000'
-            prefs['leftthumb'] = '#0000ff'
-            prefs['leftindex'] = '#00007f'
-            prefs['leftmiddle'] = '#00007f'
-            prefs['leftring'] = '#00007f'
-            prefs['leftpinky'] = '#00007f'
+            prefs['leftthumb'] = '#00ffff'
+            prefs['leftindex'] = '#0099ff'
+            prefs['leftmiddle'] = '#0000ff'
+            prefs['leftring'] = '#6600ff'
+            prefs['leftpinky'] = '#ff00ff'
             prefs['lefthand'] = '#0000ff'
-            prefs['rightthumb'] = '#00ff00'
-            prefs['rightindex'] = '#007f00'
-            prefs['rightmiddle'] = '#007f00'
-            prefs['rightring'] = '#007f00'
-            prefs['rightpinky'] = '#007f00'
+            prefs['rightthumb'] = '#ff8000'
+            prefs['rightindex'] = '#ffd900'
+            prefs['rightmiddle'] = '#b3ff00'
+            prefs['rightring'] = '#00ff00'
+            prefs['rightpinky'] = '#00ffbf'
             prefs['righthand'] = '#00ff00'
 
         return prefs
@@ -775,7 +775,7 @@ def mapRGBStringToPalette(RGBstring, palette_map):
 # Create the toplevel widget
 root = tk.Tk()
 # Create the application object
-my_app = SFKKApplication(root)
+my_app = STKKApplication(root)
 # Capture the Close Window event and
 # map it to the Exit button handler
 root.protocol("WM_DELETE_WINDOW", my_app.quit)
